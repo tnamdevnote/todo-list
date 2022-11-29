@@ -1,0 +1,18 @@
+@import url(../src/index.css);
+
+.appWrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white-third);
+}
+
+.app {
+  width: 500px;
+  height: 500px;
+  background-color: var(--color-light-theme);
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px var(--color-white-third);
+}
