@@ -1,0 +1,6 @@
+@import url(../../../src/index.css);
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+};
