@@ -11,9 +11,11 @@ export default function TodoForm({ onAddTodo }: TodoFormProp) {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onAddTodo(formData);
-    setFormData('');
+    if (formData.trim()) {
+      e.preventDefault();
+      onAddTodo(formData);
+      setFormData('');
+    }
   };
 
   return (

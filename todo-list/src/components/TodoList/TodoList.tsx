@@ -30,7 +30,7 @@ export default function TodoList() {
 
   console.log(todoList);
   return (
-    <section className={style.todoList}>
+    <section className={style.todoApp}>
       <NavMenu />
       <ul className="todo__list">
         {todoList?.map((todo) => (
