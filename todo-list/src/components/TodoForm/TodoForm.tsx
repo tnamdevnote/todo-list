@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-export default function TodoForm() {
+interface TodoFormProp {
+  onAddTodo: (text: string) => void;
+}
+
+export default function TodoForm({ onAddTodo }: TodoFormProp) {
   const [formData, setFormData] = useState('');
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData(e.target.value);
@@ -8,6 +12,7 @@ export default function TodoForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    onAddTodo(formData);
     setFormData('');
   };
 
