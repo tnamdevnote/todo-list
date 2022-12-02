@@ -1,10 +1,15 @@
 import { Todo } from '../../types/types';
 
 interface TodoItemProps {
-  label: string;
-  status: 'active' | 'completed';
+  todo: Todo;
+  onDelete: (id: string) => void;
 }
 
-export default function TodoItem({ label, status }: TodoItemProps) {
-  return <li>{label}</li>;
+export default function TodoItem({ todo, onDelete }: TodoItemProps) {
+  return (
+    <li>
+      {todo.label}
+      <button onClick={() => onDelete(todo.id)}>delete</button>
+    </li>
+  );
 }

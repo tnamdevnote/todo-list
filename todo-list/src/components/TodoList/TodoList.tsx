@@ -21,13 +21,20 @@ export default function TodoList() {
     });
   };
 
+  const handleDeleteTodo = (id: string) => {
+    dispatch({
+      type: 'DELETE_TODO',
+      id,
+    });
+  };
+
   console.log(todoList);
   return (
     <section className={style.todoList}>
       <NavMenu />
       <ul className="todo__list">
-        {todoList?.map(({ id, label, status }) => (
-          <TodoItem key={id} label={label} status={status} />
+        {todoList?.map((todo) => (
+          <TodoItem key={todo.id} todo={todo} onDelete={handleDeleteTodo} />
         ))}
       </ul>
       <TodoForm onAddTodo={handleAddTodo} />
