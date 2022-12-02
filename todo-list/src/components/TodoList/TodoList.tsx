@@ -16,10 +16,18 @@ export default function TodoList() {
       todo: {
         id: uuid(),
         label: text,
-        status: 'active',
+        completed: false,
       },
     });
   };
+
+  const handleToggleTodo = (id: string, completed: boolean) => [
+    dispatch({
+      type: 'TOGGLE_TODO',
+      id,
+      completed,
+    }),
+  ];
 
   const handleDeleteTodo = (id: string) => {
     dispatch({
@@ -28,13 +36,17 @@ export default function TodoList() {
     });
   };
 
-  console.log(todoList);
   return (
     <section className={style.todoApp}>
       <NavMenu />
       <ul className="todo__list">
         {todoList?.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} onDelete={handleDeleteTodo} />
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            onToggle={handleToggleTodo}
+            onDelete={handleDeleteTodo}
+          />
         ))}
       </ul>
       <TodoForm onAddTodo={handleAddTodo} />

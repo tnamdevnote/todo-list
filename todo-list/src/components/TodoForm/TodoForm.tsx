@@ -6,6 +6,7 @@ interface TodoFormProp {
 
 export default function TodoForm({ onAddTodo }: TodoFormProp) {
   const [formData, setFormData] = useState('');
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData(e.target.value);
   };
