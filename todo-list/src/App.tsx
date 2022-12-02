@@ -1,12 +1,12 @@
 import styles from './App.module.css';
 import NavMenu from './components/NavMenu/NavMenu';
+import TodoForm from './components/TodoForm/TodoForm';
+import TodoList from './components/TodoList/TodoList';
 
 function App() {
   return (
     <div className={styles.appWrapper}>
-      <section className={styles.app}>
-        <NavMenu></NavMenu>
-      </section>
+      <TodoList />
     </div>
   );
 }
