@@ -3,3 +3,5 @@ export interface Todo {
   label: string;
   completed: boolean;
 }
+
+export type Filter = 'All' | 'Active' | 'Completed';

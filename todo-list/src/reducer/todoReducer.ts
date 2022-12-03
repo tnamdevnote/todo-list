@@ -1,4 +1,3 @@
-import { ReducerAction } from 'react';
 import { Todo } from '../types/types';
 
 type Action =
@@ -17,11 +16,11 @@ export default function todoReducer(state: Todo[] = [], action: Action) {
         if (todo.id === action.id) {
           return {
             ...todo,
-            completed: action.completed
-          }
+            completed: action.completed,
+          };
         }
-        return todo
-      })
+        return todo;
+      });
     }
     case 'DELETE_TODO': {
       return [...state].filter((todo) => todo.id !== action.id);

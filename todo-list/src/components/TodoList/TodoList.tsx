@@ -2,12 +2,15 @@ import { useReducer } from 'react';
 import uuid from 'react-uuid';
 import style from './TodoList.module.css';
 import TodoForm from '../TodoForm/TodoForm';
-import NavMenu from '../NavMenu/NavMenu';
 import todoReducer from '../../reducer/todoReducer';
 import TodoItem from '../TodoItem/TodoItem';
-import { text } from 'node:stream/consumers';
+import { Filter, Todo } from '../../types/types';
 
-export default function TodoList() {
+interface TodoListProps {
+  filter: 'All' | 'Active' | 'Completed';
+}
+
+export default function TodoList({ filter }: TodoListProps) {
   const [todoList, dispatch] = useReducer(todoReducer, []);
 
   const handleAddTodo = (text: string) => {
@@ -36,11 +39,11 @@ export default function TodoList() {
     });
   };
 
+  const filteredList = getFilteredTodoList(todoList, filter);
   return (
-    <section className={style.todoApp}>
-      <NavMenu />
+    <>
       <ul className="todo__list">
-        {todoList?.map((todo) => (
+        {filteredList?.map((todo) => (
           <TodoItem
             key={todo.id}
             todo={todo}
@@ -50,6 +53,18 @@ export default function TodoList() {
         ))}
       </ul>
       <TodoForm onAddTodo={handleAddTodo} />
-    </section>
+    </>
   );
+}
+
+function getFilteredTodoList(todoList: Todo[], filter: Filter) {
+  if (filter === 'All') {
+    return todoList;
+  }
+  if (filter === 'Active') {
+    return todoList.filter((todo) => todo.completed === false);
+  }
+  if (filter === 'Completed') {
+    return todoList.filter((todo) => todo.completed === true);
+  }
 }
