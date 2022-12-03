@@ -3,17 +3,33 @@
 .header {
     display: flex;
     justify-content: space-between;
-};
+}
 
-.toggleDark {
-    color: blue;
+.toggle {
+    color: var(--color-primary);
+    transition: color var(--animation-duration);
+}
+
+.toggle:hover {
+    color: var(--color-primary-dark);
 }
 
 .menu {
+    margin: 0;
     display: flex;
 }
 
 .menuButton {
+    color: var(--color-font);
     font-size: var(--font-regular);
     font-weight: var(--weight-regular);
+    transition: color var(--animation-duration);
+}
+
+.menuButton.active {
+    color: var(--color-primary);
+}
+
+.menuButton:hover {
+    color: var(--color-primary-dark);
 }

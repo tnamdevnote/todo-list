@@ -3,12 +3,13 @@ import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import styles from './NavMenu.module.css';
 interface NavMenuProps {
   filters: Filter[];
+  activeFilter: Filter;
   onChange: React.Dispatch<React.SetStateAction<Filter>>;
 }
-export default function NavMenu({ filters, onChange }: NavMenuProps) {
+export default function NavMenu({ filters, activeFilter, onChange }: NavMenuProps) {
   return (
     <header className={styles.header}>
-      <button className={styles.toggleDark}>
+      <button type="button" className={styles.toggle}>
         <WbSunnyIcon />
       </button>
       <ul className={styles.menu}>
@@ -16,7 +17,7 @@ export default function NavMenu({ filters, onChange }: NavMenuProps) {
           return (
             <li key={filter}>
               <button
-                className={styles.menuButton}
+                className={`${styles.menuButton} ${filter === activeFilter ? styles.active : ''}`}
                 type="button"
                 onClick={() => onChange(filter)}
               >

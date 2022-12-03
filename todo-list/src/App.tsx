@@ -6,14 +6,18 @@ import { Filter } from './types/types';
 
 const filters: Filter[] = ['All', 'Active', 'Completed'];
 function App() {
-  const [filter, setFilter] = useState(filters[0]);
-  console.log(filter);
+  const [activeFilter, setActiveFilter] = useState(filters[0]);
+
   return (
     <div className={styles.appWrapper}>
       <section className={styles.todoApp}>
-        <NavMenu filters={filters} onChange={setFilter} />
+        <NavMenu
+          filters={filters}
+          activeFilter={activeFilter}
+          onChange={setActiveFilter}
+        />
         <hr />
-        <TodoList filter={filter} />
+        <TodoList filter={activeFilter} />
       </section>
     </div>
   );
