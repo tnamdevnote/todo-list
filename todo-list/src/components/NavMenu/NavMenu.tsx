@@ -1,6 +1,6 @@
 import { Filter } from '../../types/types';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import styles from './NavMenu.module.css';
-
 interface NavMenuProps {
   filters: Filter[];
   onChange: React.Dispatch<React.SetStateAction<Filter>>;
@@ -8,7 +8,9 @@ interface NavMenuProps {
 export default function NavMenu({ filters, onChange }: NavMenuProps) {
   return (
     <header className={styles.nav}>
-      <button className="nav__toggle-dark">Toggle</button>
+      <button className="nav__toggle-dark">
+        <WbSunnyIcon />
+      </button>
       <ul className="nav__menu">
         {filters.map((filter) => {
           return (
