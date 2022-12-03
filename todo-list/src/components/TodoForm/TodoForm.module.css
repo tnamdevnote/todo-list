@@ -1,0 +1,35 @@
+@import url(../../../src/index.css);
+
+.form {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.input {
+  width: 85%;
+  padding: 16px;
+  font-size: var(--font-regular);
+  border: none;
+  box-sizing: border-box;
+}
+
+.input:focus{
+  outline: none;
+}
+
+.add {
+  width: 15%;
+  background-color: var(--color-primary);
+  color: var(--color-font-contrast);
+  transition: background-color var(--animation-duration);
+}
+
+.add:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+}

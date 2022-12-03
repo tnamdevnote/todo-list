@@ -1,2 +1,5 @@
 @import url(../../../src/index.css);
 
+.todoList {
+  height: 70%;
+}

@@ -7,15 +7,19 @@ interface NavMenuProps {
 }
 export default function NavMenu({ filters, onChange }: NavMenuProps) {
   return (
-    <header className={styles.nav}>
-      <button className="nav__toggle-dark">
+    <header className={styles.header}>
+      <button className={styles.toggleDark}>
         <WbSunnyIcon />
       </button>
-      <ul className="nav__menu">
+      <ul className={styles.menu}>
         {filters.map((filter) => {
           return (
             <li key={filter}>
-              <button type="button" onClick={() => onChange(filter)}>
+              <button
+                className={styles.menuButton}
+                type="button"
+                onClick={() => onChange(filter)}
+              >
                 {filter}
               </button>
             </li>

@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
 import uuid from 'react-uuid';
-import style from './TodoList.module.css';
+import styles from './TodoList.module.css';
 import TodoForm from '../TodoForm/TodoForm';
 import todoReducer from '../../reducer/todoReducer';
 import TodoItem from '../TodoItem/TodoItem';
@@ -42,7 +42,7 @@ export default function TodoList({ filter }: TodoListProps) {
   const filteredList = getFilteredTodoList(todoList, filter);
   return (
     <>
-      <ul className="todo__list">
+      <ul className={styles.todoList}>
         {filteredList?.map((todo) => (
           <TodoItem
             key={todo.id}

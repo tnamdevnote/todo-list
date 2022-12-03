@@ -1,6 +1,19 @@
 @import url(../../../src/index.css);
 
-.nav {
+.header {
     display: flex;
     justify-content: space-between;
 };
+
+.toggleDark {
+    color: blue;
+}
+
+.menu {
+    display: flex;
+}
+
+.menuButton {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+}
