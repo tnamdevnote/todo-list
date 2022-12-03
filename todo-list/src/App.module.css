@@ -16,4 +16,5 @@
   background-color: var(--color-light-theme);
   border-radius: 16px;
   box-shadow: 4px 4px 4px var(--color-white-third);
+  /* box-sizing: border-box; */
 }

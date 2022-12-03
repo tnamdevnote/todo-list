@@ -1,6 +1,7 @@
 @import url(../../../src/index.css);
 
 .header {
+    height: 10%;
     display: flex;
     justify-content: space-between;
 }
@@ -32,4 +33,9 @@
 
 .menuButton:hover {
     color: var(--color-primary-dark);
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
 }

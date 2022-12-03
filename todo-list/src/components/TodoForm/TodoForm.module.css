@@ -1,6 +1,7 @@
 @import url(../../../src/index.css);
 
 .form {
+  height: 10%;
   display: flex;
   border-radius: 8px;
   overflow: hidden;
