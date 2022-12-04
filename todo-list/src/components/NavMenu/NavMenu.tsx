@@ -1,5 +1,6 @@
 import { Filter } from '../../types/types';
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import styles from './NavMenu.module.css';
 interface NavMenuProps {
   filters: Filter[];
@@ -10,7 +11,7 @@ export default function NavMenu({ filters, activeFilter, onChange }: NavMenuProp
   return (
     <header className={styles.header}>
       <button className={styles.toggle} type="button">
-        <WbSunnyIcon />
+        <DarkModeIcon />
       </button>
       <ul className={styles.menu}>
         {filters.map((filter) => {

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import styles from './TodoItem.module.css';
 import { Todo } from '../../types/types';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 interface TodoItemProps {
   todo: Todo;
@@ -13,16 +14,20 @@ export default function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
   };
 
   return (
-    <li>
-      <label>
+    <li className={styles.todoItem}>
+      <label className={styles.todoLabel} htmlFor={todo.label}>
         <input
+          className={styles.checkbox}
           type="checkbox"
+          id={todo.label}
           checked={todo.completed}
           onChange={handleInputChange}
         />
         {todo.label}
       </label>
-      <button onClick={() => onDelete(todo.id)}>delete</button>
+      <button className={styles.delete} onClick={() => onDelete(todo.id)}>
+        <DeleteIcon />
+      </button>
     </li>
   );
 }

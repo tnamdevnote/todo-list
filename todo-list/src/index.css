@@ -4,7 +4,7 @@
   --color-primary: #00b192;
   --color-primary-light: #59e4c2;
   --color-primary-dark: #008064;
-  --color-font: #3a3a3a;
+  --color-font: #5c5c5c;
   --color-font-contrast: #ffffff;
   --color-light-theme: #e9e9e9;
   --color-dark-theme: #15232c;
@@ -12,7 +12,7 @@
 
   /* Font Size */
   --font-large: 48px;
-  --font-medium: 28px;
+  --font-medium: 22px;
   --font-regular: 18px;
   --font-small: 16px;
   --font-micro: 14px;

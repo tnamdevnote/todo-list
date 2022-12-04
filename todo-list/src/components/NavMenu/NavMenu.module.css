@@ -23,7 +23,7 @@
 .menuButton {
     color: var(--color-font);
     font-size: var(--font-regular);
-    font-weight: var(--weight-regular);
+    font-weight: var(--weight-semi-bold);
     transition: color var(--animation-duration);
 }
 
