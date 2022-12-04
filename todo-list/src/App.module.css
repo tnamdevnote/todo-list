@@ -9,12 +9,22 @@
   background-color: var(--color-white-third);
 }
 
-.todoApp {
+.todoApp.light {
   padding: 20px;
   width: 500px;
   height: 500px;
   background-color: var(--color-light-theme);
   border-radius: 16px;
   box-shadow: 4px 4px 4px var(--color-white-third);
-  /* box-sizing: border-box; */
+  transition: background-color var(--animation-duration);
+}
+
+.todoApp.dark {
+  padding: 20px;
+  width: 500px;
+  height: 500px;
+  background-color: var(--color-dark-theme);
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px var(--color-white-third);
+  transition: background-color var(--animation-duration);
 }

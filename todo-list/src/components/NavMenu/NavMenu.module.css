@@ -20,14 +20,25 @@
     display: flex;
 }
 
-.menuButton {
+.menuButton.light {
     color: var(--color-font);
     font-size: var(--font-regular);
     font-weight: var(--weight-semi-bold);
     transition: color var(--animation-duration);
 }
 
-.menuButton.active {
+.menuButton.dark {
+    color: var(--color-font-contrast);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-semi-bold);
+    transition: color var(--animation-duration);
+}
+
+.menuButton.active.light {
+    color: var(--color-primary);
+}
+
+.menuButton.active.dark {
     color: var(--color-primary);
 }
 

@@ -4,4 +4,5 @@ export interface Todo {
   completed: boolean;
 }
 
+export type DarkModeType = 'light' | 'dark';
 export type Filter = 'All' | 'Active' | 'Completed';
