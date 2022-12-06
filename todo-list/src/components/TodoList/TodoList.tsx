@@ -11,7 +11,7 @@ interface TodoListProps {
 }
 
 export default function TodoList({ filter }: TodoListProps) {
-  const [todoList, dispatch] = useReducer(todoReducer, []);
+  const [todoList, dispatch] = useReducer(todoReducer, getStoredTodoList());
 
   const handleAddTodo = (text: string) => {
     dispatch({
@@ -24,13 +24,13 @@ export default function TodoList({ filter }: TodoListProps) {
     });
   };
 
-  const handleToggleTodo = (id: string, completed: boolean) => [
+  const handleToggleTodo = (id: string, completed: boolean) => {
     dispatch({
       type: 'TOGGLE_TODO',
       id,
       completed,
-    }),
-  ];
+    });
+  };
 
   const handleDeleteTodo = (id: string) => {
     dispatch({
@@ -55,6 +55,12 @@ export default function TodoList({ filter }: TodoListProps) {
       <TodoForm onAddTodo={handleAddTodo} />
     </>
   );
+}
+
+function getStoredTodoList() {
+  const reference = localStorage.getItem('todo');
+  if (reference) return JSON.parse(reference);
+  return [];
 }
 
 function getFilteredTodoList(todoList: Todo[], filter: Filter) {

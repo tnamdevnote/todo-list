@@ -2,4 +2,5 @@
 
 .todoList {
   height: 70%;
+  overflow-y: auto;
 }

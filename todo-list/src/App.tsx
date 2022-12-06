@@ -11,7 +11,6 @@ function App() {
   const [theme, setTheme] = useState<DarkModeType>('light');
   const [activeFilter, setActiveFilter] = useState(filters[0]);
 
-  console.log(theme);
   return (
     <DarkModeContext.Provider value={theme}>
       <div className={styles.appWrapper}>

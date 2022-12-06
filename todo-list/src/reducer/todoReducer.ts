@@ -9,10 +9,13 @@ export default function todoReducer(state: Todo[] = [], action: Action) {
   switch (action.type) {
     case 'ADD_TODO': {
       const { id, label, completed } = action.todo;
-      return [...state, { id, label, completed }];
+      const todoList = [...state, { id, label, completed }];
+      localStorage.setItem('todo', JSON.stringify(todoList));
+
+      return todoList;
     }
     case 'TOGGLE_TODO': {
-      return [...state].map((todo) => {
+      const todoList = [...state].map((todo) => {
         if (todo.id === action.id) {
           return {
             ...todo,
@@ -21,9 +24,15 @@ export default function todoReducer(state: Todo[] = [], action: Action) {
         }
         return todo;
       });
+
+      localStorage.setItem('todo', JSON.stringify(todoList));
+      return todoList;
     }
     case 'DELETE_TODO': {
-      return [...state].filter((todo) => todo.id !== action.id);
+      const todoList =  [...state].filter((todo) => todo.id !== action.id);
+
+      localStorage.setItem('todo', JSON.stringify(todoList));
+      return todoList;
     }
   }
 }

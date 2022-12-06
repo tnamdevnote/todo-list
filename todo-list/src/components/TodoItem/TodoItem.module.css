@@ -1,9 +1,14 @@
 @import url(../../../src/index.css);
 
 
-.todoItem{
+.todoItem {
+  margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
+}
+
+.todoItem:hover {
+  color: var(--color-primary);
 }
 
 .todoLabel.light {
@@ -13,11 +18,19 @@
   cursor: pointer;
 }
 
+.todoLabel.light:hover{
+  color: var(--color-primary);
+}
+
 .todoLabel.dark {
   display: flex;
   color: var(--color-font-contrast);
   font-size: var(--font-medium);
   cursor: pointer;
+}
+
+.todoLabel.dark:hover{
+  color: var(--color-primary);
 }
 
 .checkbox[type="checkbox"] {
