@@ -9,7 +9,7 @@
   background-color: var(--color-white-third);
 }
 
-.todoApp.light {
+.todoApp {
   padding: 20px;
   width: 500px;
   height: 500px;

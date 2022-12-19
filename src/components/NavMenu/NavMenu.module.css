@@ -20,7 +20,7 @@
     display: flex;
 }
 
-.menuButton.light {
+.menuButton {
     color: var(--color-font);
     font-size: var(--font-regular);
     font-weight: var(--weight-semi-bold);
@@ -34,7 +34,7 @@
     transition: color var(--animation-duration);
 }
 
-.menuButton.active.light {
+.menuButton.active {
     color: var(--color-primary);
 }
 

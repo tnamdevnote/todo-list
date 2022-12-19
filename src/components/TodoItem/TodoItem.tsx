@@ -2,7 +2,7 @@ import styles from './TodoItem.module.css';
 import { Todo } from '../../types/types';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useContext } from 'react';
-import { DarkModeContext } from '../../context/DarkModeContext';
+import { useDarkModeContext } from '../../context/DarkModeContext';
 
 interface TodoItemProps {
   todo: Todo;
@@ -11,7 +11,7 @@ interface TodoItemProps {
 }
 
 export default function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
-  const theme = useContext(DarkModeContext);
+  const { darkMode } = useDarkModeContext();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onToggle(todo.id, e.target.checked);
@@ -20,7 +20,7 @@ export default function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
   return (
     <li className={styles.todoItem}>
       <label
-        className={`${styles.todoLabel} ${theme === 'dark' ? styles.dark : styles.light}`}
+        className={`${styles.todoLabel} ${darkMode ? styles.dark : styles.light}`}
         htmlFor={todo.label}
       >
         <input
