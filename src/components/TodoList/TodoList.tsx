@@ -11,7 +11,7 @@ interface TodoListProps {
 }
 
 export default function TodoList({ filter }: TodoListProps) {
-  const [todoList, dispatch] = useReducer(todoReducer, getStoredTodoList());
+  const [todoList, dispatch] = useReducer(todoReducer, null, getStoredTodoList);
 
   const handleAddTodo = (text: string) => {
     dispatch({
