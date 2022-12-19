@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './App.module.css';
 import NavMenu from './components/NavMenu/NavMenu';
 import TodoList from './components/TodoList/TodoList';
-import { DarkModeType, Filter } from './types/types';
+import { Filter } from './types/types';
 import { useDarkModeContext } from './context/DarkModeContext';
 
 const filters: Filter[] = ['All', 'Active', 'Completed'];

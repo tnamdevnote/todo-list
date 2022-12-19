@@ -22,7 +22,7 @@
 .add {
   width: 15%;
   background-color: var(--color-primary);
-  color: var(--color-font-contrast);
+  color: var(--color-white);
   transition: background-color var(--animation-duration);
 }
 
