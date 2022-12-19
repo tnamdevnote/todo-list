@@ -59,8 +59,7 @@ export default function TodoList({ filter }: TodoListProps) {
 
 function getStoredTodoList() {
   const reference = localStorage.getItem('todo');
-  if (reference) return JSON.parse(reference);
-  return [];
+  return reference ? JSON.parse(reference) : [];
 }
 
 function getFilteredTodoList(todoList: Todo[], filter: Filter) {

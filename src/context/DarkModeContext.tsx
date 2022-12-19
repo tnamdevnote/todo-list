@@ -39,6 +39,7 @@ function updateDarkMode(darkMode: boolean) {
     localStorage.theme = 'light';
   }
 }
+
 export function useDarkModeContext() {
   const context = useContext(DarkModeContext);
 

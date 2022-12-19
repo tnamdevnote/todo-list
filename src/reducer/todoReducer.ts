@@ -22,6 +22,7 @@ export default function todoReducer(state: Todo[] = [], action: Action) {
             completed: action.completed,
           };
         }
+
         return todo;
       });
 
@@ -29,9 +30,9 @@ export default function todoReducer(state: Todo[] = [], action: Action) {
       return todoList;
     }
     case 'DELETE_TODO': {
-      const todoList =  [...state].filter((todo) => todo.id !== action.id);
-
+      const todoList = [...state].filter((todo) => todo.id !== action.id);
       localStorage.setItem('todo', JSON.stringify(todoList));
+
       return todoList;
     }
   }

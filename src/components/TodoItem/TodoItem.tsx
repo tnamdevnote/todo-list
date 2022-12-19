@@ -21,12 +21,12 @@ export default function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
     <li className={styles.todoItem}>
       <label
         className={`${styles.todoLabel} ${darkMode ? styles.dark : styles.light}`}
-        htmlFor={todo.label}
+        htmlFor={todo.id}
       >
         <input
           className={styles.checkbox}
           type="checkbox"
-          id={todo.label}
+          id={todo.id}
           checked={todo.completed}
           onChange={handleInputChange}
         />
