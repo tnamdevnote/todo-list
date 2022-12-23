@@ -1,7 +1,6 @@
 import styles from './TodoItem.module.css';
 import { Todo } from '../../types/types';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useContext } from 'react';
 import { useDarkModeContext } from '../../context/DarkModeContext';
 
 interface TodoItemProps {

@@ -1,6 +1,5 @@
-import { useContext } from 'react';
 import styles from './NavMenu.module.css';
-import { DarkModeType, Filter } from '../../types/types';
+import { Filter } from '../../types/types';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useDarkModeContext } from '../../context/DarkModeContext';
