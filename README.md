@@ -16,10 +16,11 @@ The purpose of this project is to apply and solidify following concepts that I l
 - Toggle light/dark mode
   - By default the app will set the mode based on the user device's theme preferences
 
-#### Stack used
+#### Built with:
 - React
 - TypeScript
 - HTML/CSS
+
 ![Todo List](https://user-images.githubusercontent.com/44216709/209412246-3108ed48-b6f0-40ca-9ce9-4311de654de6.gif)
 
 
