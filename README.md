@@ -1,6 +1,6 @@
 # Todo List with React
 
-Demo Link -> [Todo List](https://main--wonderful-stroopwafel-5abf59.netlify.app/) <br>
+Demo Link -> [Todo List](https://getitdonetoday.netlify.app/) <br>
 
 ## Goal
 This is a simple todo list app that helps you manage your daily task. <br>
